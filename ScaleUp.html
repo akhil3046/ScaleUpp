@@ -1,0 +1,184 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Portfolio Website
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="font-roboto bg-gray-100">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg">
+   <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between">
+     <div class="flex space-x-4">
+      <div>
+       <a class="flex items-center py-5 px-2 text-gray-700" href="#">
+        <img alt="Company logo with a modern design" class="h-8 w-8 mr-2" height="50" src="https://storage.googleapis.com/a1aa/image/h4xw8uBXUO7rBVCQ8djR8I45GOvNT2LxZg6Odf3OzO7GvteTA.jpg" width="50"/>
+        <span class="font-bold">
+         My Portfolio
+        </span>
+       </a>
+      </div>
+      <div class="hidden md:flex items-center space-x-1">
+       <a class="py-5 px-3 text-gray-700 hover:text-gray-900" href="#services">
+        Services
+       </a>
+       <a class="py-5 px-3 text-gray-700 hover:text-gray-900" href="#contact">
+        Contact
+       </a>
+      </div>
+     </div>
+     <div class="md:hidden flex items-center">
+      <button class="mobile-menu-button">
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden md:hidden">
+   <a class="block py-2 px-4 text-sm hover:bg-gray-200" href="#services">
+    Services
+   </a>
+   <a class="block py-2 px-4 text-sm hover:bg-gray-200" href="#contact">
+    Contact
+   </a>
+  </div>
+  <!-- Hero Section -->
+  <section class="bg-white py-20">
+   <div class="max-w-7xl mx-auto px-4 text-center">
+    <h1 class="text-4xl font-bold text-gray-900">
+     Transforming Ideas into Reality
+    </h1>
+    <p class="mt-4 text-gray-600">
+     We provide top-notch services in Web Development, MVP, CRM, and Google Rating & Reviews.
+    </p>
+   </div>
+  </section>
+  <!-- Services Section -->
+  <section class="py-20 bg-gray-100" id="services">
+   <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-gray-900">
+     Our Services
+    </h2>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <img alt="Web development service icon" class="h-16 w-16 mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/Imt9fNgn0LU6CKRYkbq3NKetivc8ZTNFeiZZVELkPdSW826nA.jpg" width="100"/>
+      <h3 class="mt-4 text-xl font-bold text-gray-900 text-center">
+       Web Development
+      </h3>
+      <p class="mt-2 text-gray-600 text-center">
+       We build responsive and high-quality websites.
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <img alt="MVP service icon" class="h-16 w-16 mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/95h0dhwFHCL1BxQlzvyBwsbe8lKwCyBurCdUc3hiYG5EvteTA.jpg" width="100"/>
+      <h3 class="mt-4 text-xl font-bold text-gray-900 text-center">
+       MVP
+      </h3>
+      <p class="mt-2 text-gray-600 text-center">
+       We create Minimum Viable Products to test your ideas.
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <img alt="CRM service icon" class="h-16 w-16 mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/I2V2IxF9MWJoP9a4eeKsLF2e88rRTrDEpNQL9XYWlpmV826nA.jpg" width="100"/>
+      <h3 class="mt-4 text-xl font-bold text-gray-900 text-center">
+       CRM
+      </h3>
+      <p class="mt-2 text-gray-600 text-center">
+       We develop Customer Relationship Management systems.
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <img alt="Google Rating & Reviews service icon" class="h-16 w-16 mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/FClan30FecVGcKuRI9eYO78dR0euuOtpX3YxNaZBv37f4t1PB.jpg" width="100"/>
+      <h3 class="mt-4 text-xl font-bold text-gray-900 text-center">
+       Google Rating & Reviews
+      </h3>
+      <p class="mt-2 text-gray-600 text-center">
+       We provide detailed and interactive reviews for your products.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="py-20 bg-white" id="contact">
+   <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-gray-900">
+     Contact Us
+    </h2>
+    <div class="mt-10 max-w-lg mx-auto">
+     <form action="#" class="bg-gray-100 p-6 rounded-lg shadow-lg" method="POST">
+      <div class="mb-4">
+       <label class="block text-gray-700" for="name">
+        Name
+       </label>
+       <input class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" id="name" name="name" type="text"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700" for="email">
+        Email
+       </label>
+       <input class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" id="email" name="email" type="email"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700" for="services">
+        Services
+       </label>
+       <select class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" id="services" multiple name="services[]">
+        <option value="web-development">
+         Web Development
+        </option>
+        <option value="mvp">
+         MVP
+        </option>
+        <option value="crm">
+         CRM
+        </option>
+        <option value="google-rating-reviews">
+         Google Rating & Reviews
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700" for="message">
+        Message
+       </label>
+       <textarea class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" id="message" name="message" rows="4">
+       </textarea>
+      </div>
+      <div class="text-center">
+       <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700" type="submit">
+        Send Message
+       </button>
+      </div>
+     </form>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6">
+   <div class="max-w-7xl mx-auto px-4 text-center text-white">
+    <p>
+     © 2023 My Portfolio. All rights reserved.
+    </p>
+   </div>
+  </footer>
+  <script>
+   const btn = document.querySelector('button.mobile-menu-button');
+        const menu = document.querySelector('.mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+  </script>
+ </body>
+</html>
+
