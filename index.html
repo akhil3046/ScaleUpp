@@ -205,15 +205,19 @@
                 body: formData,
                 mode: 'no-cors'
             })
-            .then(() => {
-                toggleModal();
-                Swal.fire({
-                    title: 'Thank you!',
-                    html: 'We will contact you shortly.<br>In case of emergency, reach out at: 7386400905',
-                    icon: 'success',
-                    confirmButtonText: 'OK'
-                });
-                form.reset();
+          .then(() => {
+    toggleModal();
+    Swal.fire({
+        title: 'Thank you!',
+        html: 'We will contact you shortly.<br>In case of emergency, reach out at: <a href="https://wa.me/9492841192" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: underline;">9492841192</a>',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        showCloseButton: true,
+        customClass: {
+            htmlContainer: 'text-left'
+        }
+    });
+    form.reset();
             })
             .catch((error) => {
                 console.error(error);
