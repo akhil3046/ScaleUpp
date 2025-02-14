@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearUpGarage MVP</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #4f46e5;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #f8fafc;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #64748b;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin: 2rem 0 1.5rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .pros-card {
+            border-left: 4px solid #10b981;
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .cons-card {
+            border-left: 4px solid #ef4444;
+            background: rgba(239, 68, 68, 0.05);
+        }
+
+        .list {
+            list-style: none;
+        }
+
+        .list li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .list li i {
+            color: var(--primary);
+            margin-top: 4px;
+        }
+
+        .next-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .next-button:hover {
+            background: var(--secondary);
+            box-shadow: 0 5px 15px -3px rgba(99, 102, 241, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>GearUpGarage MVP</h1>
+            <p>Revolutionizing vehicle repair with doorstep services and real-time tracking.</p>
+        </div>
+
+        <!-- User Section -->
+        <section>
+            <h2 class="section-title">User Perspective</h2>
+
+            <!-- Pros -->
+            <div class="card pros-card">
+                <h3>Advantages</h3>
+                <ul class="list">
+                    <li><i class="fas fa-check-circle"></i>Saves time with doorstep services.</li>
+                    <li><i class="fas fa-check-circle"></i>Real-time tracking of the mechanic's arrival.</li>
+                    <li><i class="fas fa-check-circle"></i>Allows users to speak with the mechanic before they start their journey.</li>
+                    <li><i class="fas fa-check-circle"></i>Convenient pickup and drop services for users.</li>
+                    <li><i class="fas fa-check-circle"></i>Visiting nearby recommended centers is an alternative option.</li>
+                    <li><i class="fas fa-check-circle"></i>Multifunctional toolkits simplify onsite repairs.</li>
+                    <li><i class="fas fa-check-circle"></i>Saves users from miscommunication with features like photo uploads for problem identification.</li>
+                    <li><i class="fas fa-check-circle"></i>Transparent pricing and service tracking.</li>
+                </ul>
+            </div>
+
+            <!-- Cons -->
+            <div class="card cons-card">
+                <h3>Challenges</h3>
+                <ul class="list">
+                    <li><i class="fas fa-times-circle"></i>High service charges compared to local mechanics.</li>
+                    <li><i class="fas fa-times-circle"></i>Long waiting times for mechanics to arrive.</li>
+                    <li><i class="fas fa-times-circle"></i>Difficulty in handling major repairs (e.g., engine works) at the doorstep.</li>
+                    <li><i class="fas fa-times-circle"></i>Possibility of mechanics arriving without required tools or spare parts.</li>
+                    <li><i class="fas fa-times-circle"></i>Warranty claims and follow-ups with the same mechanic may be challenging.</li>
+                    <li><i class="fas fa-times-circle"></i>Miscommunication between users and mechanics can lead to misunderstandings.</li>
+                    <li><i class="fas fa-times-circle"></i>Some services may not be feasible for doorstep execution.</li>
+                    <li><i class="fas fa-times-circle"></i>Lack of transparency in spare part quality and pricing.</li>
+                    <li><i class="fas fa-times-circle"></i>Unclear refund or failed repair policies.</li>
+                    <li><i class="fas fa-times-circle"></i>Unclear scope of services listed on the website.</li>
+                    <li><i class="fas fa-times-circle"></i>Overcharging concerns if users are unfamiliar with repair costs.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Mechanic Section -->
+        <section>
+            <h2 class="section-title">Mechanic Perspective</h2>
+
+            <!-- Pros -->
+            <div class="card pros-card">
+                <h3>Advantages</h3>
+                <ul class="list">
+                    <li><i class="fas fa-check-circle"></i>Transparent pricing details, including long-distance extra charges, help mechanics prepare for each service.</li>
+                    <li><i class="fas fa-check-circle"></i>A clear structure on how money is charged (commission-based or service-based) ensures clarity for mechanics.</li>
+                    <li><i class="fas fa-check-circle"></i>A simple and user-friendly interface for mechanics improves ease of use.</li>
+                    <li><i class="fas fa-check-circle"></i>Good customer support encourages a smoother experience for mechanics.</li>
+                    <li><i class="fas fa-check-circle"></i>Ability to view issues beforehand through photos or videos makes it easier to understand and prepare for jobs.</li>
+                    <li><i class="fas fa-check-circle"></i>Flexibility to take jobs based on their free time or schedule.</li>
+                    <li><i class="fas fa-check-circle"></i>Fair service charges help mechanics earn appropriately for their effort.</li>
+                    <li><i class="fas fa-check-circle"></i>Listing all services in detail helps mechanics identify which jobs to take.</li>
+                </ul>
+            </div>
+
+            <!-- Cons -->
+            <div class="card cons-card">
+                <h3>Challenges</h3>
+                <ul class="list">
+                    <li><i class="fas fa-times-circle"></i>Transporting spare parts or tools to the doorstep is difficult and time-consuming.</li>
+                    <li><i class="fas fa-times-circle"></i>Public transport for mechanics can lead to delays in reaching service locations.</li>
+                    <li><i class="fas fa-times-circle"></i>Insufficient workforce may result in higher workloads and delays during peak times.</li>
+                    <li><i class="fas fa-times-circle"></i>Miscommunication with users who are not educated or tech-savvy can cause confusion about the problems reported.</li>
+                    <li><i class="fas fa-times-circle"></i>Mechanics may need extra employees, but it’s not always viable due to the lack of fixed income.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Next Button -->
+        <div style="text-align: center;">
+            <a href="#" class="next-button">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
