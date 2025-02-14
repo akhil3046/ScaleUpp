@@ -189,69 +189,83 @@ Secure Today → Enjoy Tomorrow </p>
         <h1>>>Building your's, Before our's<<</h1>
     </footer>
 
-    <script>
-        // Form Submission
-        const form = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submit-btn');
+   <script>
+    // Form Submission
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submit-btn');
+    
+    submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         
-        submitBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            if (!form.checkValidity()) {
-                form.reportValidity();
-                return;
-            }
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
 
-            const formData = new FormData(form);
-            fetch('https://docs.google.com/forms/d/e/1FAIpQLSd4TZafJfgbrUZgxuen6bNIPgR8JYJ856WTyVUBP7igl3j7dg/formResponse', {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors'
-            })
-          .then(() => {
-    toggleModal();
-    Swal.fire({
-        title: 'Thank you!',
-        html: 'We will contact you shortly.<br>In case of emergency, reach out at: <a href="https://wa.me/9492841192" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: underline;">9492841192</a>',
-        icon: 'success',
-        confirmButtonText: 'OK',
-        showCloseButton: true,
-        customClass: {
-            htmlContainer: 'text-left'
+        const formData = new FormData(form);
+        fetch('https://docs.google.com/forms/d/e/1FAIpQLSd4TZafJfgbrUZgxuen6bNIPgR8JYJ856WTyVUBP7igl3j7dg/formResponse', {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors'
+        })
+      .then(() => {
+        toggleModal();
+        Swal.fire({
+            title: 'Thank you!',
+            html: 'We will contact you shortly.<br>In case of emergency, reach out at: <a href="https://wa.me/9492841192" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: underline;">9492841192</a>',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            showCloseButton: true,
+            customClass: {
+                htmlContainer: 'text-left'
+            }
+        });
+        form.reset();
+      })
+      .catch((error) => {
+          console.error(error);
+          Swal.fire({
+              title: 'Error!',
+              text: 'Something went wrong. Please try again.',
+              icon: 'error',
+              confirmButtonText: 'OK'
+          });
+      });
+    });
+
+    // Modal Handling
+    function toggleModal() {
+        const modal = document.getElementById('contactModal');
+        modal.classList.toggle('hidden');
+    }
+
+    // Check for query parameter and open modal if needed
+    function checkModalQuery() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const openModal = urlParams.get('openModal');
+
+        if (openModal === 'true') {
+            toggleModal(); // Open the modal
+        }
+    }
+
+    // Run the check when the page loads
+    window.onload = checkModalQuery;
+
+    // Close modal on outside click or Escape key
+    window.onclick = function(event) {
+        const modal = document.getElementById('contactModal');
+        if (event.target === modal) {
+            modal.classList.add('hidden');
+        }
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const modal = document.getElementById('contactModal');
+            modal.classList.add('hidden');
         }
     });
-    form.reset();
-            })
-            .catch((error) => {
-                console.error(error);
-                Swal.fire({
-                    title: 'Error!',
-                    text: 'Something went wrong. Please try again.',
-                    icon: 'error',
-                    confirmButtonText: 'OK'
-                });
-            });
-        });
-
-        // Modal Handling
-        function toggleModal() {
-            const modal = document.getElementById('contactModal');
-            modal.classList.toggle('hidden');
-        }
-
-        window.onclick = function(event) {
-            const modal = document.getElementById('contactModal');
-            if (event.target === modal) {
-                modal.classList.add('hidden');
-            }
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                const modal = document.getElementById('contactModal');
-                modal.classList.add('hidden');
-            }
-        });
-    </script>
+</script>
 </body>
 </html>
